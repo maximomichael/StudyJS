@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Ex_13</title>
+</head>
+<body>
+    <script>
+        //Escopo Alinhado, Função dentro de outra função.
+        var landScape = function(){
+            var result = "";
+            var flat = function(size){
+                for(var count = 0; count < size; count++){
+                    result += "_";
+                }
+            };
+            var mountain = function(size){
+                result += "/";
+                for(var count = 0; count < size; count++){
+                    result += "'";
+                }
+                result += "\\";
+            };
+
+            flat(10);
+            mountain(5);
+            flat(2);
+            mountain(6);
+            flat(1);
+            mountain(2);
+            flat(2);
+            return result;
+        };
+        console.log(landScape());
+    </script>
+</body>
+</html>

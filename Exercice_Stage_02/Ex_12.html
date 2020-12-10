@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Ex_12</title>
+</head>
+<body>
+    <script>
+        //Variavel Global.
+        var x = "outside";
+
+        var function1 = function(){
+            //Variavel Local.
+            var x = "inside f1";
+        };
+        //Neste caso a variavel local não interfere no global e vice-versa.
+        function1();
+        console.log(x);
+
+        //Anterando a variavel global.
+        var function2 = function() {
+            x = "inside f2";
+        };
+        function2();
+        console.log(x);
+    </script>
+</body>
+</html>

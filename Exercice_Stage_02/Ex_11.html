@@ -7,12 +7,27 @@
 </head>
 <body>
     <script>
-        //Create function
+        //Função com return
         var Square = function(x){
             return x * x;
         };
-        //Print value
         console.log(Square(10));
+
+        //Função não possui return e parametros
+        var helloWorld = function(){
+            console.log("Hello world");
+        }
+        helloWorld();
+
+        // Função com return e parametros
+        var power = function(base, exponent){
+            var result = 1;
+            for(var count = 0; count < exponent; count++){
+                result *= base;
+            }
+           return result;
+        };
+        Console.log(power(2, 10));
     </script>
 </body>
 </html>
