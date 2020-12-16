@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Ex_15</title>
+</head>
+<body>
+    <script>
+        //Closuse é um metodo de retorno de varivel local.
+        function wrapValue(n){
+            var localVariable = n;
+            return function() {return localVariable;};
+        }
+
+        var wrap1 = wrapValue(1);
+        var wrap2 = wrapValue(2);
+
+        console.log(wrap1());
+        console.log(wrap2());
+    </script>
+</body>
+</html>

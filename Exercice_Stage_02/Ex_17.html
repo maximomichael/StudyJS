@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Ex_17</title>
+</head>
+<body>
+    <script>
+        //Recursão, Chamando o função dentro dela mesma.
+        function power(base, exponent){
+            if(exponent == 0){
+                return 1;
+            }
+            else{
+                return base * power(base, exponent -1);
+            }
+        }
+
+        console.log(power(2, 3));
+        console.log(power(2, 0));
+    </script>
+</body>
+</html>

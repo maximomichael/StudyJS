@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Ex_16</title>
+</head>
+<body>
+    <script>
+        //Exemplo de closure.
+        function mutiplier(factor){
+            return function (number){
+                return number * factor;
+            };
+        }
+
+        var twice = mutiplier(2);
+        console.log(twice(5));
+        console.log(twice(10));
+    </script>
+</body>
+</html>
