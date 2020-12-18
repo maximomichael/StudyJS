@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+</head>
+<body>
+    <script>
+        //Tentado fazer o codigo dar certo
+        function soluction(target){
+            var history = [1];
+            var invert = false;
+
+            for(var start = 1;;){
+  
+                console.log(history + " --- " + start);
+                if(start == target) {
+                    break;
+                }
+
+                if(!invert){
+                    if(start + 5 <= target){
+                        start += 5;
+                        history.push(5);
+                    }
+                    else{
+                        start -= history[history.length - 1];
+                        history.pop();
+                        invert = true;
+                    }
+                }
+                if(start == target){
+                    break;
+                }
+                if(invert){
+                    if(start * 3 <= target){
+                        start *= 3;
+                        history.push(3);
+                    }else{
+                        start = start / history[history.length - 1];
+                        history.pop();
+                        if((start * 3) > target ){
+                            start = start / history[history.length - 1];
+                            history.pop();
+                        }
+                        if((start * 3) + 5 <= target){
+                            start *= 3;
+                            history.push(3);
+                            invert = false;
+                        }
+                        
+                    }
+                }
+            }
+            return history;
+        }
+
+        console.log(soluction(24));
+    </script>
+    
+</body>
+</html>
