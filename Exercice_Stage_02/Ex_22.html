@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Ex_22</title>
+</head>
+<body>
+    <script>
+        //Versão 3.0 do farmInventory, com função crescente com solução pratica. Retorna sempre numeros com 3 digitos;
+        function zeroPad(number, width){
+            var numberString = String(number);
+            while(numberString.length < width){
+                numberString = "0" + numberString;
+            }
+            return numberString;
+        }
+
+        function printFarmInventory(pigs, chickens, cows){
+            console.log(zeroPad(pigs, 3) + " - Pigs");
+            console.log(zeroPad(chickens, 3) + " - Chickens");
+            console.log(zeroPad(cows, 3) + " - Cows")
+        }
+        
+        printFarmInventory(5, 3, 4);
+    </script>
+</body>
+</html>
